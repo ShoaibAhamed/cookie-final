@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="main.scss">
+</head>
+<body>
+
+	<div id="cookie-notification" class="CookieMessage" style="display: none;">
+  <div class="CookieMessage-content"> 
+    <p>This site uses cookies for better customer experience<a href="#">Cookie Policy</a> and <a href="#">Privacy Policy</a>.<p>
+    <a id="cookie-notification-close" class="CookieMessage-button" href="#">Ok</a>
+    
+  </div>
+</div>
+
+<script type="text/javascript">
+	if (!localStorage.getItem("cookiesAccepted")) { 
+  var cookieMessage = document.getElementById('cookie-notification');  
+  var closeCookie = document.getElementById('cookie-notification-close');
+  
+  cookieMessage.style.display = 'block';  
+  closeCookie.addEventListener("click", function(e) {  
+    e.preventDefault();
+    localStorage.setItem("cookiesAccepted", true);
+    
+    cookieMessage.style.display = 'none';
+  });
+}
+</script>
+
+</body>
+</html>

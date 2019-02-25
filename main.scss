@@ -1,0 +1,38 @@
+.CookieMessage {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 999;
+  display: none;
+}
+
+.CookieMessage-content {
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 20px 0 20px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-size: 12px;
+  a {
+    color: white;
+  }
+  
+  p {
+    margin: 0 0 20px 0;
+  }
+}
+
+.CookieMessage-button {
+  background: #f6913a;
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  &:hover {
+    background: #e38635;
+  }
+}
